@@ -4,7 +4,7 @@ services:
   app:
     build: .
    
-    image: swychpay:v1
-    container_name: swychpay_container  
+    image: swychpayment:v1
+    container_name: swychpayment_container  
 
 
