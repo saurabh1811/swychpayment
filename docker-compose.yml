@@ -1,0 +1,10 @@
+
+
+services:
+  app:
+    build: .
+   
+    image: swychpay:v1
+    container_name: swychpay_container  
+
+
