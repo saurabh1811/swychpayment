@@ -108,7 +108,6 @@ onMounted(() => {
     });
 
     DashboardService.getFiatWalletInfo().then((resp) => {
-        fiat_wallets.value = resp.data.data ;
         console.log(fiat_wallets)
     })
     .catch((error) => {
@@ -213,7 +212,7 @@ function formatCountryCurrency(value: any, currency_code: string) {
                                     </v-avatar>
                                     <div style="margin-left: 0px !important;">
                             
-                                        <h6 class="text-subtitle-1 mb-0">{{wallet.attributes.currency_code}} Wallet</h6>
+                                        <h6 class="text-subtitle-1 mb-0"> Wallet</h6>
                                         <span class="text-subtitle-2 text-lightText font-weight-regular">Fiat Holding</span>
                                     </div>
                                     <div class="text-right">
@@ -227,7 +226,7 @@ function formatCountryCurrency(value: any, currency_code: string) {
                                 <div class="d-flex align-center justify-space-between w-100 ga-2">
                                     <div>
                                         <h6 class="mb-0 text-subtitle-2 text-lightText font-weight-regular">Total Balance</h6>
-                                        <span class="text-subtitle-1 f_large">{{formatCountryCurrency(wallet.attributes.net_bal, wallet.attributes.currency_code)}}</span>
+                                        <span class="text-subtitle-1 f_large">{{formatCountryCurrency('', '')}}</span>
                                     </div>
                                 </div>
                             </v-row>
@@ -240,7 +239,7 @@ function formatCountryCurrency(value: any, currency_code: string) {
                     <v-list-item
                         link
                         subtitle="View Transaction"
-                        :href="`/fiat_wallets/${wallet.id}`"
+                        :href="`/fiat_wallets/`"
                         style="background-color: #f6f6f6"
                        >
                         <template v-slot:append>
